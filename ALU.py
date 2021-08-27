@@ -8,9 +8,10 @@ class ALU:
         self.data = []
         self.c_flag = 0
         self.zflag = 0
+        self.out = 0
 
     def ADD(self,rs1,rs2,rd):
-        rd = rs1+ rs2
+        out = rs1+ rs2
         return rd
 
     def SUB(self,rs1,rs2,rd):
@@ -94,10 +95,10 @@ class ALU:
        return rd
 
 
-rd = 0;
-my_alu = ALU()
+# rd = 0;
+# my_alu = ALU()
 
-print(my_alu.ADD(1,2,rd))
-print(my_alu.SUB(1,2,rd))
-print(my_alu.SLL(15,2,rd))
-print(my_alu.SRA(11,1,rd))
+# print(my_alu.ADD(1,2,rd))
+# print(my_alu.SUB(1,2,rd))
+# print(my_alu.SLL(15,2,rd))
+# print(my_alu.SRA(11,1,rd))
