@@ -9,12 +9,22 @@ class cpu():
         self.program_counter = pc.program_counter()
         self.reg_file = reg.reg_file()
 
-rd = 0
+rd = 5
 
 my_cpu = cpu()
 
-rd = my_cpu.alu.ADD(6,2,rd)
-my_cpu.reg_file.write(3,my_cpu.alu.ADD(6,2,rd))
-print(rd)
-#my_cpu.reg_file.write(3,rd)
-print(my_cpu.reg_file.read(3))    
+my_cpu.reg_file.write(rd,my_cpu.alu.ADD(6,2))
+print(my_cpu.reg_file.read(rd))
+
+##Fetch
+##Read instruction for instruction cache
+
+
+##Decode
+##Turn op code into control signals for CPU
+
+##Execute
+##perform alu operation/any other operation (e.g. branch/push to stack/etc.)
+
+##Write Back
+##Update registers

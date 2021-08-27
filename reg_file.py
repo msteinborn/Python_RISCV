@@ -2,6 +2,8 @@
 class reg_file():
     def __init__(self):
         self.data = [0]*32
+        self.reg_x = 0
+        self.reg_y = 0
     
     def read(self, reg):
         return self.data[reg]

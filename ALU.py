@@ -10,87 +10,87 @@ class ALU:
         self.zflag = 0
         self.out = 0
 
-    def ADD(self,rs1,rs2,rd):
-        out = rs1+ rs2
+    def ADD(self,rs1,rs2):
+        rd = rs1+ rs2
         return rd
 
-    def SUB(self,rs1,rs2,rd):
+    def SUB(self,rs1,rs2):
         rd = rs1 - rs2
         return rd
     
-    def XOR(self,rs1,rs2,rd):
+    def XOR(self,rs1,rs2):
         rd = rs1^rs2
         return rd
     
-    def OR(self,rs1,rs2,rd):
+    def OR(self,rs1,rs2):
         rd = rs1 |rs2
         return rd
     
-    def AND(self,rs1,rs2,rd):
+    def AND(self,rs1,rs2):
         rd = rs1 & rs2
         return
     
-    def SLL(self,rs1,rs2,rd):
+    def SLL(self,rs1,rs2):
         rd = rs1 << rs2
         return rd
     
-    def SRL(self,rs1,rs2,rd):
+    def SRL(self,rs1,rs2):
         rd = rs1 >> rs2
         return
     
-    def SRA(self,rs1,rs2,rd):
+    def SRA(self,rs1,rs2):
         tmp = rs1 & 8
         rd = rs1 >> rs2
         rd  += tmp
         return rd
 
-    def SLT(self,rs1,rs2,rd):
+    def SLT(self,rs1,rs2):
         rd = rs1 < rs2
         return rd
 
-    def SLTU(self,rs1,rs2,rd):
+    def SLTU(self,rs1,rs2):
         rd = math.abs(rs1) < math.abs(rs2)
         return rd
 
-    def ADDI(self,rs1,imm,rd):
+    def ADDI(self,rs1,imm):
         rd = imm+ rs1
         return rd
 
-    def SUBI(self,rs1,imm,rd):
+    def SUBI(self,rs1,imm):
         rd = rs1 - imm
         return rd
     
-    def XORI(self,rs1,imm,rd):
+    def XORI(self,rs1,imm):
         rd = imm^rs1
         return rd
 
-    def ORI(self,rs1,imm,rd):
+    def ORI(self,rs1,imm):
         rd = imm |rs1
         return
     
-    def ANDI(self,rs1,imm,rd):
+    def ANDI(self,rs1,imm):
         rd = imm & rs1
         return
     
-    def SLLI(self,rs1,imm,rd):
+    def SLLI(self,rs1,imm):
         rd = rs1 << imm
         return rd
     
-    def SRLI(self,rs1,imm,rd):
+    def SRLI(self,rs1,imm):
         rd = rs1 >> imm
         return
     
-    def SRAI(self,rs1,imm,rd):
+    def SRAI(self,rs1,imm):
         tmp = rs1 & 8
         rd = rs1 >> imm
         rd  +=tmp
         return rd
 
-    def SLTI(self,rs1,imm,rd):
+    def SLTI(self,rs1,imm):
         rd = rs1 < imm
         return rd
 
-    def SLTIU(self,rs1,imm,rd):
+    def SLTIU(self,rs1,imm):
        rd = math.abs(rs1) < math.abs(imm)
        return rd
 
