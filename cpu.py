@@ -13,6 +13,10 @@ rd = 5
 
 my_cpu = cpu()
 
+##Control unit should get instruction, and then execute. So that if you do
+##Control_unit.decode(some binary)-> command is staged in pipeline and then executed
+##So each cycle loading instruction from cache and then decodiing
+
 my_cpu.reg_file.write(rd,my_cpu.alu.ADD(6,2))
 print(my_cpu.reg_file.read(rd))
 
